@@ -1,0 +1,33 @@
+// Colors
+$accentColor: #FD665E;
+$buttonColor: $accentColor;
+$mainBackgroundColor: #FFFFFF;
+$primaryTextColor: #000000;
+$secondaryTextColor: #585858;
+$buttonTextColor: #FFFFFF;
+
+// breakpoints
+$breakpoints: (
+xs: 575px,
+sm: 767px,
+md: 991px,
+);
+
+// container
+%container {
+   max-width: 1170px;
+   padding: 0 70px;
+   margin: 0 auto;
+
+   @media screen and (max-width: 575px) {
+      padding: 0 30px;
+   }
+
+   @media screen and (max-width: 767px) {
+      padding: 0 40px;
+   }
+
+   @media screen and (max-width: 991px) {
+      padding: 0 50px;
+   }
+}

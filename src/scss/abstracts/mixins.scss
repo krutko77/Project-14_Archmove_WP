@@ -1,0 +1,21 @@
+
+// fonts
+@mixin text($fontSize, $fontFamily, $lineHeight, $color) {
+   font-size: $fontSize;
+   font-family: $fontFamily;
+   line-height: $lineHeight;
+   color: $color;
+}
+
+// @media
+@mixin media($width, $type:max) {
+   @if map_has_key($breakpoints, $width) {
+       $width: map_get($breakpoints, $width);
+       @if $type == min {
+           $width: $width + 1px;
+       }
+   }
+   @media (#{$type}-width: $width) {
+       @content;
+   } 
+}
