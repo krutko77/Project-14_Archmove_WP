@@ -3,9 +3,13 @@
    padding: 28px 0 28px;
    @include text(14px, "SFUIDisplayRegular", 285%, $secondaryTextColor);
 
+   @include media(xs) {
+      padding: 15px 0 15px;
+   }
+
    &__container {
-      max-width: 1390px;
-      padding: 0 25px 0;
+      max-width: 1380px;
+      padding: 0 30px 0;
       margin: 0 auto;
    }
 
@@ -15,24 +19,35 @@
       align-items: center;
 
       @include media(md) {
-         flex-direction: column;         
-      }
-
-      @media (max-width: 630px) {
-         display: none;
+         flex-direction: column;
       }
    }
 
    &__left-block {
       display: flex;
       align-items: center;
+
+      @include media(xs) {
+         align-self: flex-start;
+      }
    }
 
    &__logo-link {
-      margin: 10px 62px 0 0;
+      margin-top: 10px;
+      margin-right: calc(1.6vw + 31px);
 
       &:hover {
          opacity: 0.7;
+      }
+
+      @include media(xs) {
+         display: inline-block;
+      }
+   }
+
+   &__nav {
+      @include media(xs) {
+         display: none;
       }
    }
 
@@ -41,7 +56,7 @@
    }
 
    &__nav li {
-      margin-right: 48px;
+      margin-right: calc(1.2vw + 24px);
 
       &:last-child {
          margin-right: 0;
@@ -55,11 +70,15 @@
    &__right-block {
       display: flex;
       align-items: center;
+
+      @include media(xs) {
+         display: none;
+      }
    }
 
    &__img {
       cursor: pointer;
-      margin-right: 50px;
+      margin-right: 26px;
 
       &:hover {
          opacity: 0.7;
@@ -70,10 +89,15 @@
    &__button--sign-up {
       display: inline-block;
       padding: 4px 24px;
+      border-radius: 4px;
       @include text(14px, "SFUIDisplayRegular", 285%, $secondaryTextColor);
 
       &:hover {
          opacity: 0.7;
+      }
+
+      @include media(md) {
+         padding: 1px 21px;
       }
    }
 
@@ -97,46 +121,56 @@
 //Burger
 
 .icon-menu {
-	display: none;
-	@media (max-width: 630px) {
-		display: block;
-		position: relative;
-		width: 30px;
-		height: 18px;
-		cursor: pointer;
-		z-index: 5;
-		span,
-		&::before,
-		&::after {
-			content: "";
-			transition: all 0.3s ease 0s;
-			left: 0px;
-			position: absolute;
-			width: 100%;
-			height: 2px;
-			background-color: #000;
-		}
-		&::before {
-			top: 0px;
-		}
-		&::after {
-			bottom: 0px;
-		}
-		span {
-			top: calc(50% - 1px);
-		}
-		.menu-open & {
-			span {
-				transform: scale(0);
-			}
-			&::before {
-				transform: rotate(-45deg);
-				top: calc(50% - 1px);
-			}
-			&::after {
-				transform: rotate(45deg);
-				bottom: calc(50% - 1px);
-			}
-		}
-	}
+   display: none;
+
+   @include media(xs) {
+      display: block;
+      position: relative;
+      top: -34px;
+      right: calc(-100vw + 90px);
+      width: 30px;
+      height: 18px;
+      cursor: pointer;
+      z-index: 5;
+
+      span,
+      &::before,
+      &::after {
+         content: "";
+         transition: all 0.3s ease 0s;
+         left: 0px;
+         position: absolute;
+         width: 100%;
+         height: 2px;
+         background-color: #000;
+      }
+
+      &::before {
+         top: 0px;
+      }
+
+      &::after {
+         bottom: 0px;
+      }
+
+      span {
+         top: calc(50% - 1px);
+      }
+
+      .menu-open & {
+         span {
+            transform: scale(0);
+         }
+
+         &::before {
+            transform: rotate(-45deg);
+            top: calc(50% - 1px);
+         }
+
+         &::after {
+            transform: rotate(45deg);
+            bottom: calc(50% - 1px);
+         }
+      }
+   }
 }
