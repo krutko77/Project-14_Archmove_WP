@@ -4,7 +4,7 @@
    padding: 8px 32px;
    background-color: $accentColor;
    border-radius: 4px;
-   @include text(14px, "SFUIDisplayRegular", 40px, $buttonTextColor);
+   @include text(14px, "SFUIDisplaySemiBold", 40px, $buttonTextColor);
    text-transform: uppercase;
    cursor: pointer;
 

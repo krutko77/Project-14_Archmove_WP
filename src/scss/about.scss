@@ -36,6 +36,14 @@
       color: $accentColor;
    }
 
+   &__content {
+      display: flex;
+
+      @include media(sm) {
+        flex-direction: column-reverse;
+      }  
+   }
+
    &__description {
 
       @include media(sm) {
@@ -58,14 +66,6 @@
       @include media(sm) {
          width: 100%;
          text-align: center;
-      }  
-   }
-
-   &__content {
-      display: flex;
-
-      @include media(sm) {
-        flex-direction: column-reverse;
       }  
    }
 

@@ -1,0 +1,60 @@
+.work {
+   margin-bottom: 64px;
+
+   &__title {
+      @include text(48px, "NewYorkExtraLargeBold", 125%, $primaryTextColor);
+      letter-spacing: -2px;
+      max-width: 390px;
+      margin-bottom: 40px;
+
+      @include media(md) {
+         font-size: 40px;
+         max-width: 310px;
+      }
+
+      @include media(sm) {
+         font-size: 35px;
+         max-width: 250px;
+         margin-bottom: 30px;
+      }
+
+      @include media(xs) {
+         font-size: 30px;
+         margin-bottom: 20px;
+      }
+   }
+
+   &__content {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__img {
+      max-width: 100%;
+      width: 100%;
+   }
+
+   &__text-block {
+      width: 407px;
+      padding: 45px 0 0 80px;     
+   }
+
+   &__text-box {
+      max-width: 305px;
+      margin-bottom: 48px;     
+   }
+
+   &__text-box--last {
+      margin-bottom: 70px;
+   }
+
+   &__subtitle {
+      @include text(16px, "SFUIDisplaySemiBold", 26px, $primaryTextColor);
+      margin-bottom: 8px;
+   }
+
+   &__text {
+      @include text(16px, "SFUIDisplayRegular", 26px, $primaryTextColor);
+   }
+
+}
