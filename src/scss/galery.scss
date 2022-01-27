@@ -2,6 +2,10 @@
 
    margin-bottom: 137px;
 
+   @include media(xs) {
+      margin-bottom: 90px;
+   }
+
    &__title {
       @include text(48px, "NewYorkExtraLargeBold", 125%, $primaryTextColor);
       letter-spacing: -2px;
@@ -21,7 +25,6 @@
       }
 
       @include media(xs) {
-         font-size: 30px;
          margin-bottom: 20px;
       }
    }

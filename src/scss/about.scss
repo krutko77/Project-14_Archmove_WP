@@ -22,8 +22,8 @@
          font-size: 70px;
          max-width: 500px;
          margin-bottom: 30px;
-      }  
-      
+      }
+
 
       @include media(xs) {
          font-size: 55px;
@@ -40,8 +40,8 @@
       display: flex;
 
       @include media(sm) {
-        flex-direction: column-reverse;
-      }  
+         flex-direction: column-reverse;
+      }
    }
 
    &__description {
@@ -66,18 +66,20 @@
       @include media(sm) {
          width: 100%;
          text-align: center;
-      }  
+      }
    }
 
    &__btn {
       text-transform: none;
    }
-   
+
    &__img-wrap {
       margin-bottom: 15px;
    }
 
    &__img {
       max-width: 100%;
-   }  width: 100%;
+   }
+
+   width: 100%;
 }

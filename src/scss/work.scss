@@ -10,16 +10,17 @@
       @include media(md) {
          font-size: 40px;
          max-width: 310px;
+         margin: 0 auto 40px;
       }
 
       @include media(sm) {
          font-size: 35px;
-         max-width: 250px;
+         max-width: 255px;
          margin-bottom: 30px;
       }
 
       @include media(xs) {
-         font-size: 30px;
+         // font-size: 30px;
          margin-bottom: 20px;
       }
    }
@@ -27,6 +28,20 @@
    &__content {
       display: flex;
       justify-content: space-between;
+
+      @include media(md) {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+      }
+   }
+
+   &__img-wrap {
+      margin-right: 40px;
+
+      @include media(md) {
+         margin: 0;
+       }
    }
 
    &__img {
@@ -36,16 +51,77 @@
 
    &__text-block {
       width: 407px;
-      padding: 45px 0 0 80px;     
+      padding: 45px 0 0;
+
+      @include media(md) {
+         width: 100%;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 30px 0 0;
+       }
    }
 
    &__text-box {
-      max-width: 305px;
-      margin-bottom: 48px;     
+      padding-left: 80px;
+      max-width: 385px;
+      margin-bottom: 48px;
+
+      @include media(md) {
+         max-width: 500px;         
+       }
+
+       @include media(md) {
+         margin-bottom: 30px;         
+       }
+   }
+
+   &__text-box--first {
+      position: relative;
+
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0px;
+         left: -3px;
+         width: 48px;
+         height: 56px;
+         background: url("./../img/work-icon-1.svg") no-repeat;
+      }
+   }
+
+   &__text-box--second {
+      position: relative;
+
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0px;
+         left: -3px;
+         width: 39px;
+         height: 48px;
+         background: url("./../img/work-icon-2.svg") no-repeat;
+      }
+
    }
 
    &__text-box--last {
       margin-bottom: 70px;
+      position: relative;
+
+      @include media(md) {
+         margin-bottom: 50px;         
+       }
+
+      &::after {
+         content: "";
+         position: absolute;
+         top: 0px;
+         left: -3px;
+         width: 40px;
+         height: 53px;
+         background: url("./../img/work-icon-3.svg") no-repeat;
+      }
    }
 
    &__subtitle {
@@ -55,6 +131,14 @@
 
    &__text {
       @include text(16px, "SFUIDisplayRegular", 26px, $primaryTextColor);
+   }
+
+   &__btn {
+      margin-left: 80px;
+
+      @include media(md) {
+         margin: 0;
+       }
    }
 
 }
