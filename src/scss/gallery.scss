@@ -25,6 +25,8 @@
       }
 
       @include media(xs) {
+         font-size: 30px;
+         max-width: 285px;
          margin-bottom: 20px;
       }
    }

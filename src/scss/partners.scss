@@ -1,0 +1,78 @@
+.partners {
+   margin-bottom: 106px;
+
+   @include media(md) {
+      margin-bottom: 70px;
+   }
+
+   &__title {
+      @include text(48px, "NewYorkExtraLargeBold", 125%, $primaryTextColor);
+      letter-spacing: -2px;
+      margin-bottom: 56px;
+
+      @include media(md) {
+         font-size: 40px;
+         margin: 0 auto 40px;
+      }
+
+      @include media(sm) {
+         font-size: 35px;
+         margin-bottom: 30px;
+      }
+
+      @include media(xs) {
+         font-size: 30px;
+         margin-bottom: 20px;
+      }
+   }
+
+   &__wrap {
+      display: flex;
+      justify-content: space-between;
+
+      @include media(md) {
+         display: grid;
+         grid-template-columns: 1fr 1fr 1fr;
+         gap: 30px;
+         align-self: center;
+      }
+
+      @include media(xs) {
+         grid-template-columns: 1fr 1fr;
+         gap: 20px;
+      }
+   }
+
+   &__item {
+      display: flex;
+      align-items: center;
+   }
+
+   &__item-1 {
+      @include media(xs) {
+         padding-right: 11vw;
+      }
+   }
+
+   &__item-2 {
+      @include media(xs) {
+         padding-right: 16vw;
+      }
+   }
+
+   &__item-4 {
+      @include media(xs) {
+         padding-right: 27vw;
+      }
+   }
+
+   &__item-5 {
+      @include media(xs) {
+         padding-right: 11vw;
+      }
+   }
+
+   &__img {
+      max-width: 100%;
+   }
+}
