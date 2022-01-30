@@ -7,8 +7,6 @@
    }
 
    &__title {
-      @include text(48px, "NewYorkExtraLargeBold", 125%, $primaryTextColor);
-      letter-spacing: -2px;
       max-width: 470px;
       text-align: center;
       margin: 0 auto 40px;

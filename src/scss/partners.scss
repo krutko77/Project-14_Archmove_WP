@@ -6,8 +6,6 @@
    }
 
    &__title {
-      @include text(48px, "NewYorkExtraLargeBold", 125%, $primaryTextColor);
-      letter-spacing: -2px;
       margin-bottom: 56px;
 
       @include media(md) {
@@ -29,6 +27,12 @@
    &__wrap {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+      // flex-wrap: wrap;
+
+      // @include media(md) {
+      //    justify-content: flex-start;
+      // }
 
       @include media(md) {
          display: grid;
@@ -39,13 +43,18 @@
 
       @include media(xs) {
          grid-template-columns: 1fr 1fr;
-         gap: 20px;
+         // gap: 20px;
       }
    }
 
    &__item {
       display: flex;
       align-items: center;
+      // margin: 0 70px 30px 0;
+
+      // &:last-child {
+      //    margin: 0;
+      // }
    }
 
    &__item-1 {

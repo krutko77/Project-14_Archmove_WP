@@ -13,24 +13,21 @@
       align-items: center;
    }
 
-   &__nav {
-      flex: 1;
-   }
-
    &__nav ul {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
       max-width: 480px;
+      
 
       @include media(sm) {
          max-width: 380px;
+         margin-right: 50px;
       }
 
       @include media(xs) {
-         justify-content: start;
-         max-width: 280px;
-         margin-right: 30px;
+         justify-content: flex-start;
+         margin-right: 40px;
       }
    }
 
@@ -39,10 +36,14 @@
    }
 
    &__nav li {
-      margin-right: 20px;
+      margin-right: 30px;    
+      
+      &:last-child {
+         margin: 0;
+      }
 
       @include media(xs) {
-         margin-right: 28px;
+         margin-right: 20px;
       }
    }
 

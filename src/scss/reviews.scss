@@ -1,0 +1,30 @@
+.reviews {
+   padding-top: 64px;
+   margin-bottom: 64px;
+   min-height: 1400px;
+   background: linear-gradient(#F9F9F9, #FFFFFF);
+
+   // @include media(md) {
+   //    margin-bottom: 70px;
+   // }
+
+   &__title {
+      max-width: 370px;
+      margin-bottom: 40px;
+
+      @include media(md) {
+         font-size: 40px;
+         margin: 0 auto 40px;
+      }
+
+      @include media(sm) {
+         font-size: 35px;
+         margin-bottom: 30px;
+      }
+
+      @include media(xs) {
+         font-size: 30px;
+         margin-bottom: 20px;
+      }
+   }
+}

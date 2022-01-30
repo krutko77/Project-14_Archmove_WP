@@ -124,7 +124,8 @@
    }
 
    &__nav a:hover {
-      text-decoration: underline;
+      // text-decoration: underline;
+      color: $accentColor;
    }
 
    &__right-block {

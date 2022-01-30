@@ -2,8 +2,6 @@
    margin-bottom: 64px;
 
    &__title {
-      @include text(48px, "NewYorkExtraLargeBold", 125%, $primaryTextColor);
-      letter-spacing: -2px;
       max-width: 390px;
       margin-bottom: 40px;
 
