@@ -50,6 +50,9 @@ $maxWidth: 1440;
 @import "base/null";
 
 body {
+   font-family: "SFUIDisplayRegular", sans-serif;
+   color: $primaryTextColor;
+   line-height: 26px;
 
    // Скролл заблокирован
    .lock & {

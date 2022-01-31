@@ -1,19 +1,18 @@
 .reviews {
+   padding-top: 55px;
+   background: linear-gradient(#F9F9F9, #FFFFFF);
+   min-height: 1400px;
    margin-bottom: 64px;
 
-   &__container {
-      padding-top: 55px;
-      max-width: 1440px;
-      background: linear-gradient(#F9F9F9, #FFFFFF);
+   .container {
       position: relative;
-      margin: 0 auto;
       min-height: 1400px;
 
       &::after {
          content: "";
          position: absolute;
-         bottom: 70px;
-         left: 130px;
+         bottom: 130px;
+         left: 8px;
          width: 497px;
          height: 684px;
          background: url("./../img/reviews-img.png") no-repeat;

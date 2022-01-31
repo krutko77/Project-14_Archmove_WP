@@ -128,10 +128,6 @@
       margin-bottom: 8px;
    }
 
-   &__text {
-      @include text(16px, "SFUIDisplayRegular", 26px, $primaryTextColor);
-   }
-
    &__btn {
       margin-left: 85px;
 

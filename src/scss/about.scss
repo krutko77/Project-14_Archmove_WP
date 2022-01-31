@@ -54,7 +54,6 @@
    }
 
    &__text {
-      @include text(16px, "SFUIDisplayRegular", 26px, $primaryTextColor);
       width: 284px;
       padding-top: 10px;
       margin: 0 55px 48px 0;
