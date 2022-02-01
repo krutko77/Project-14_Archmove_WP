@@ -1,7 +1,7 @@
 .footer {
    padding: 84px 0 84px;
    border-top: 1px solid $borderFooterColor;
-   @include text(12px, "SFUIDisplaySemiBold, sans-serif", 40px, $secondaryTextColor);
+   @include text(12px, "SFUIDisplaySemiBold", 40px, $secondaryTextColor);
 
    @include media(sm) {
       padding: 30px 0 30px;
@@ -31,8 +31,12 @@
       }
    }
 
+   &__nav a {
+      transition: color 0.2s ease 0.1s;
+   }
+
    &__nav a:hover {
-      text-decoration: underline;
+      color: $accentColor;  
    }
 
    &__nav li {
@@ -48,6 +52,7 @@
    }
 
    &__logo-link {
+      transition: opacity 0.2s ease 0.1s;
 
       &:hover {
          opacity: 0.7;
