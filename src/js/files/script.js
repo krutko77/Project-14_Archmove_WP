@@ -12,3 +12,9 @@ const iconMenu = document.querySelector('.header__icon-menu');
          headerMenu.classList.toggle('_active');
       });
    }
+
+   $(document).ready(function(){
+      $('.slider').slick({
+         arrows:true         
+      });
+    })
