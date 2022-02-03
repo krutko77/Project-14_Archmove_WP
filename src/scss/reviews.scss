@@ -16,7 +16,7 @@
          width: 497px;
          height: 684px;
          background: url("./../img/reviews-img.png") no-repeat;
-         z-index: 0;
+         // z-index: 0;
       }
    }
 
@@ -47,27 +47,33 @@
       padding: 40px 0 75px;
       display: flex;
       justify-content: flex-end;
-      z-index: 2;
+      
    }
 
    &__top-inner {
       min-width: 0;
       max-width: 757px;
       position: relative;
+      margin-right: 10px;
 
       &::after {
          content: "";
          position:absolute;
          width: 58px;
          height: 40px;
-         top: 0px;
-         left: 0px;
+         top: 8px;
+         left: -107px;
          background: url("./../img/slider-pseudo“.svg") no-repeat;
       }
    }
 
    &__slider {
       position: relative;
+      padding: 0px;      
+
+      .item {
+         position: relative;         
+      }
 
       .slider__item-text {
          @include text(32px, "SFUIDisplayLight", 160%, $primaryTextColor);
@@ -79,20 +85,17 @@
       .slider__item-author {
          display: inline-block;
          @include text(16px, "SFUIDisplayRegular", 160%, $primaryTextColor);
-         letter-spacing: 1px;
+         letter-spacing: 1px;         
       }
 
       .slick-track {
-         display: flex;
+         display: flex;         
       }
 
       .slick-list {
-         overflow: hidden;
-      }
-
-      .slider {
-         position: relative;
-         padding: 0px;
+         overflow: hidden; 
+         z-index: 1;  
+         position: relative;              
       }
 
       .slick-arrow {
@@ -103,16 +106,17 @@
          height: 48px;
          border: none;
          cursor: pointer;
+         z-index: 2;
       }
 
       .slick-arrow.slick-prev {
          right: 46px;
-         background: url('./../img/slider-arrow-prew.svg') 0 0 no-repeat;
+         background: url('./../img/slider-arrow-prew.svg') no-repeat;         
       }
 
       .slick-arrow.slick-next {
          right: -10px;
-         background: url('./../img/slider-arrow-next.svg') 0 0 no-repeat
+         background: url('./../img/slider-arrow-next.svg') no-repeat;         
       }  
    }
 }
