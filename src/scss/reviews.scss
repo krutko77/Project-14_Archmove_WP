@@ -1,45 +1,24 @@
 .reviews {
    padding-top: 55px;
    background: linear-gradient(#F9F9F9, #FFFFFF);
-   // min-height: 1400px;
    margin-bottom: 64px;
 
-   .container {
-      position: relative;
-      // min-height: 1400px;
-
-      &::after {
-         content: "";
-         position: absolute;
-         bottom: 61px;
-         left: 8px;
-         width: 497px;
-         height: 684px;
-         background: url("./../img/reviews-img.png") no-repeat;
-         // z-index: 0;
-      }
-   }
-
-   // @include media(md) {
-   //    margin-bottom: 70px;
-   // }
-
-   &__title {
+  re &__title {
       max-width: 370px;
 
       @include media(md) {
          font-size: 40px;
-         margin: 0 auto 40px;
+         margin: 0 auto;
+         max-width: 300px;
+         text-align: center;
       }
 
       @include media(sm) {
          font-size: 35px;
-         margin-bottom: 30px;
       }
 
       @include media(xs) {
          font-size: 30px;
-         margin-bottom: 20px;
       }
    }
 
@@ -48,6 +27,10 @@
       display: flex;
       justify-content: flex-end;
 
+      @include media(md) {
+         justify-content: center;
+         padding: 40px 0 30px;
+      }
    }
 
    &__top-inner {
@@ -55,6 +38,10 @@
       max-width: 757px;
       position: relative;
       margin-right: 10px;
+
+      @include media(md) {
+         margin-right: 0;
+      }
 
       &::after {
          content: "";
@@ -64,22 +51,33 @@
          top: 8px;
          left: -107px;
          background: url("./../img/slider-pseudo“.svg") no-repeat;
+         background-size: 100%;
+
+         @include media(md) {
+            top: -36px;
+            left: 0;
+            width: 39px;
+            height: 27px;
+         }
       }
    }
 
    &__slider {
       position: relative;
-      padding: 0px;
-
-      .slider__item {
-         position: relative;
-      }
 
       .slider__item-text {
          @include text(32px, "SFUIDisplayLight", 160%, $primaryTextColor);
          letter-spacing: 0.4px;
          max-width: 757px;
          margin-bottom: 59px;
+
+         @include media(sm) {
+            margin-bottom: 30px;
+         }
+
+         @include media(lg) {
+            font-size: calc(16px + 16 * (100vw / 1440));
+         }
       }
 
       .slider__item-author {
@@ -94,8 +92,6 @@
 
       .slick-list {
          overflow: hidden;
-         z-index: 1;
-         position: relative;
       }
 
       .slick-arrow {
@@ -107,16 +103,28 @@
          border: none;
          cursor: pointer;
          z-index: 2;
+
+         @include media(xs) {
+            bottom: -62px;
+         }
       }
 
       .slick-arrow.slick-prev {
          right: 46px;
          background: url('./../img/slider-arrow-prew.svg') no-repeat;
+
+         @include media(md) {
+            right: 56px;
+         }
       }
 
       .slick-arrow.slick-next {
          right: -10px;
          background: url('./../img/slider-arrow-next.svg') no-repeat;
+
+         @include media(md) {
+            right: -0px;
+         }
       }
    }
 
@@ -125,19 +133,76 @@
       justify-content: flex-end;
       align-items: center;
       height: 812px;
+      position: relative;
+
+      &::after {
+         content: "";
+         position: absolute;
+         bottom: 61px;
+         left: 8px;
+         width: 497px;
+         height: 684px;
+         background: url("./../img/reviews-img.png") no-repeat;
+         background-size: 100%;
+         z-index: 0;
+
+         @include media(md) {
+            left: auto;
+            top: 0px;
+            width: 397px;
+            height: 547px;
+         }
+
+         @include media(xs) {
+            top: 75px;
+            width: 298px;
+            height: 410px;
+         }
+      }
+
+      @include media(md) {
+         justify-content: center;
+         align-items: flex-end;
+         height: 780px;
+      }
+
+      @include media(xs) {
+         height: 700px;
+      }
+   }
+
+   &__slogan-block {
+      padding-top: 30px;
+      position: relative;
+      z-index: 1;
+
+      @include media(md) {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding: 0;
+      }
    }
 
    &__slogan {
       @include text(48px, "NewYorkExtraLargeBold", 124%, $primaryTextColor);
       letter-spacing: -2px;
       font-weight: 600;
-      max-width: 535px;
+      max-width: 523px;
       margin-bottom: 64px;
+
+      @include media(lg) {
+         font-size: calc(24px + 24 * (100vw / 1440));
+         max-width: 420px;
+      }
+
+      @include media(md) {
+         margin-bottom: 30px;
+         text-align: center;
+      }
    }
 
    &__slogan--color {
       color: $accentColor;
    }
-
-
 }
