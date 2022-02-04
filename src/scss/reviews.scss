@@ -1,17 +1,17 @@
 .reviews {
    padding-top: 55px;
    background: linear-gradient(#F9F9F9, #FFFFFF);
-   min-height: 1400px;
+   // min-height: 1400px;
    margin-bottom: 64px;
 
    .container {
       position: relative;
-      min-height: 1400px;
+      // min-height: 1400px;
 
       &::after {
          content: "";
          position: absolute;
-         bottom: 0px;
+         bottom: 61px;
          left: 8px;
          width: 497px;
          height: 684px;
@@ -47,7 +47,7 @@
       padding: 40px 0 75px;
       display: flex;
       justify-content: flex-end;
-      
+
    }
 
    &__top-inner {
@@ -58,7 +58,7 @@
 
       &::after {
          content: "";
-         position:absolute;
+         position: absolute;
          width: 58px;
          height: 40px;
          top: 8px;
@@ -69,10 +69,10 @@
 
    &__slider {
       position: relative;
-      padding: 0px;      
+      padding: 0px;
 
-      .item {
-         position: relative;         
+      .slider__item {
+         position: relative;
       }
 
       .slider__item-text {
@@ -85,17 +85,17 @@
       .slider__item-author {
          display: inline-block;
          @include text(16px, "SFUIDisplayRegular", 160%, $primaryTextColor);
-         letter-spacing: 1px;         
+         letter-spacing: 1px;
       }
 
       .slick-track {
-         display: flex;         
+         display: flex;
       }
 
       .slick-list {
-         overflow: hidden; 
-         z-index: 1;  
-         position: relative;              
+         overflow: hidden;
+         z-index: 1;
+         position: relative;
       }
 
       .slick-arrow {
@@ -111,12 +111,33 @@
 
       .slick-arrow.slick-prev {
          right: 46px;
-         background: url('./../img/slider-arrow-prew.svg') no-repeat;         
+         background: url('./../img/slider-arrow-prew.svg') no-repeat;
       }
 
       .slick-arrow.slick-next {
          right: -10px;
-         background: url('./../img/slider-arrow-next.svg') no-repeat;         
-      }  
+         background: url('./../img/slider-arrow-next.svg') no-repeat;
+      }
    }
+
+   &__bottom {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      height: 812px;
+   }
+
+   &__slogan {
+      @include text(48px, "NewYorkExtraLargeBold", 124%, $primaryTextColor);
+      letter-spacing: -2px;
+      font-weight: 600;
+      max-width: 535px;
+      margin-bottom: 64px;
+   }
+
+   &__slogan--color {
+      color: $accentColor;
+   }
+
+
 }
