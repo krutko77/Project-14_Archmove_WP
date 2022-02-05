@@ -2,8 +2,12 @@
 
    margin-bottom: 137px;
 
-   @include media(xs) {
+   @include media(sm) {
       margin-bottom: 90px;
+   }
+
+   @include media(xs) {
+      margin-bottom: 60px;
    }
 
    &__title {

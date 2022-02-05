@@ -1,11 +1,16 @@
 .footer {
    padding: 84px 0 84px;
    border-top: 1px solid $borderFooterColor;
-   @include text(12px, "SFUIDisplaySemiBold", 40px, $secondaryTextColor);
+   @include text(12px, "SFUIDisplaySemiBold", 333%, $secondaryTextColor);
 
    @include media(sm) {
       padding: 30px 0 30px;
    }
+
+   @include media(md) {
+      padding: 20px 0 20px;
+   }
+   
 
    &__wrapper {
       display: flex;
@@ -40,15 +45,16 @@
    }
 
    &__nav li {
-      margin-right: 30px;    
+      margin-right: 47px;    
       
       &:last-child {
          margin: 0;
       }
 
-      @include media(xs) {
+      @include media(sm) {
          margin-right: 20px;
       }
+      
    }
 
    &__logo-link {

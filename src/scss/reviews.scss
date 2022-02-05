@@ -3,7 +3,11 @@
    background: linear-gradient(#F9F9F9, #FFFFFF);
    margin-bottom: 64px;
 
-  re &__title {
+   @include media(xs) {
+      padding-top: 30px;
+   }
+
+   &__title {
       max-width: 370px;
 
       @include media(md) {
@@ -27,9 +31,12 @@
       display: flex;
       justify-content: flex-end;
 
+      @include media(lg) {
+         padding: 40px 0 30px;
+      }
+
       @include media(md) {
          justify-content: center;
-         padding: 40px 0 30px;
       }
    }
 
@@ -132,19 +139,26 @@
       display: flex;
       justify-content: flex-end;
       align-items: center;
-      height: 812px;
+      min-height: 812px;
       position: relative;
 
       &::after {
          content: "";
          position: absolute;
          bottom: 61px;
-         left: 8px;
+         left: -48px;
          width: 497px;
          height: 684px;
          background: url("./../img/reviews-img.png") no-repeat;
          background-size: 100%;
          z-index: 0;
+
+         @include media(lg) {
+            left: 0;
+            bottom: 125px;
+            width: 397px;
+            height: 547px;
+         }
 
          @include media(md) {
             left: auto;
@@ -160,14 +174,17 @@
          }
       }
 
+      @include media(lg) {
+         min-height: 780px;
+      }
+
       @include media(md) {
          justify-content: center;
          align-items: flex-end;
-         height: 780px;
       }
 
       @include media(xs) {
-         height: 700px;
+         min-height: 700px;
       }
    }
 
@@ -193,7 +210,7 @@
 
       @include media(lg) {
          font-size: calc(24px + 24 * (100vw / 1440));
-         max-width: 420px;
+         max-width: 470px;
       }
 
       @include media(md) {

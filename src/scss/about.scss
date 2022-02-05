@@ -3,8 +3,12 @@
    padding: 42px 0 0;
    margin-bottom: 93px;
 
-   @include media(xs) {
+   @include media(sm) {
       margin-bottom: 80px;
+   }
+
+   @include media(xs) {
+      margin-bottom: 50px;
    }
 
    &__title {
@@ -26,7 +30,7 @@
 
 
       @include media(xs) {
-         font-size: 55px;
+         font-size: 50px;
          max-width: 370px;
          margin-bottom: 20px;
       }
@@ -65,6 +69,7 @@
       @include media(sm) {
          width: 100%;
          text-align: center;
+         margin: 0 0 30px 0;
       }
    }
 

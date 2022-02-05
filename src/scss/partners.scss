@@ -5,6 +5,10 @@
       margin-bottom: 70px;
    }
 
+   @include media(xs) {
+      margin-bottom: 50px;
+   }
+
    &__title {
       margin-bottom: 56px;
 
