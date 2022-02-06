@@ -54,6 +54,45 @@
    }
 
    &__item {
+      position: relative; 
+      line-height: 0;  
+      // transition: background-color 0.2s ease 0.1s;
+      transition-duration: 0.5s;
+   }
+
+   &__item:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;      ;
+      background-color: rgba(0,0,0,.3);
+      opacity: 0;
+      z-index: 2; 
+      transition: opacity 0.2s ease 0.1s; 
+   }
+
+   &__item:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 30px;
+      height: 30px;
+      background: url("./../img/on-hover-search.svg") no-repeat;
+      opacity: 0;
+      z-index: 3;
+      transition: opacity 0.3s ease 0.1s;
+   }
+
+   &__item:hover::after,
+   &__item:hover::before {
+      opacity: 1;
+   }
+
+   &__item-img {
+      object-fit:cover;
       max-width: 100%;
       width: 100%;
    }
