@@ -191,7 +191,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 /* Подключаем файлы со своим кодом */
 // import "./files/jquery.magnific-popup.js";
 import "./files/slick.min.js";
-import "./files/magnific-popup.min.js";
+import "./files/jquery.magnific-popup.min.js";
 import "./files/script.js";
 //============================================================================================================================================================================================================================================
 
