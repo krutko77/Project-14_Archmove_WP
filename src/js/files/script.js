@@ -5,9 +5,9 @@
 
 
 const iconMenu = document.querySelector('.header__icon-menu');
-   if (iconMenu) {
-      const headerMenu = document.querySelector('.header__menu');
-      iconMenu.addEventListener("click", function(e){
+const headerMenu = document.querySelector('.header__menu');
+   if (iconMenu) {      
+      iconMenu.addEventListener("click", function(){
          iconMenu.classList.toggle('_active');
          headerMenu.classList.toggle('_active');
       });
