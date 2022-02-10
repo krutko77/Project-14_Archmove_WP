@@ -114,7 +114,7 @@
          height: 48px;
          border: none;
          cursor: pointer;
-         z-index: 2;         
+         z-index: 2;
 
          @include media(xs) {
             bottom: -62px;
@@ -122,7 +122,7 @@
       }
 
       .slick-arrow.slick-prev {
-         right: 46px;         
+         right: 46px;
 
          &::after {
             content: "";
@@ -132,15 +132,15 @@
             width: 48px;
             height: 48px;
             background-color: #F2F2F2;
-            z-index: 3;    
-            opacity: 0;            
-           
-         } 
-         
+            z-index: 3;
+            opacity: 0;
+            transition: opacity 0.2s ease 0.1s;
+         }
+
          &:hover::after {
             opacity: 1;
          }
-         
+
          &::before {
             content: "";
             position: absolute;
@@ -148,9 +148,9 @@
             left: 0;
             width: 48px;
             height: 48px;
-            background: url('./../img/slider-arrow-prew.svg') 0 0 no-repeat;
-            z-index: 4;            
-         }   
+            background: url('./../img/slider-arrow-prev.svg') 0 0 no-repeat;
+            z-index: 4;
+         }
 
          @include media(md) {
             right: 56px;
@@ -159,7 +159,7 @@
 
       .slick-arrow.slick-next {
          right: -10px;
-         
+
          &::after {
             content: "";
             position: absolute;
@@ -168,8 +168,9 @@
             width: 48px;
             height: 48px;
             background-color: #F2F2F2;
-            z-index: 3;    
+            z-index: 3;
             opacity: 0;
+            transition: opacity 0.2s ease 0.1s;
          }
 
          &:hover::after {
@@ -185,7 +186,7 @@
             height: 48px;
             background: url('./../img/slider-arrow-next.svg') 0 0 no-repeat;
             z-index: 4;
-         }         
+         }
 
          @include media(md) {
             right: -0px;
