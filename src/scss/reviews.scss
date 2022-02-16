@@ -116,6 +116,10 @@
          cursor: pointer;
          z-index: 2;
 
+         &:hover {
+            opacity: 1;
+         }
+
          @include media(xs) {
             bottom: -62px;
          }

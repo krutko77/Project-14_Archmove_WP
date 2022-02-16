@@ -1,8 +1,11 @@
-//====================================================================================================
 .header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
    padding: 28px 0 28px;
    @include text(14px, "SFUIDisplayRegular", 40px, $secondaryTextColor);
-   position: relative;
+   // position: relative;
 
    &::before {
       content: "";

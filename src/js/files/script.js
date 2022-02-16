@@ -3,7 +3,7 @@
 // // Подключение списка активных модулей
 // import { flsModules } from "./modules.js";
 
-
+// бургер меню
 const iconMenu = document.querySelector('.header__icon-menu');
 const headerMenu = document.querySelector('.header__menu');
    if (iconMenu) {      
@@ -13,12 +13,14 @@ const headerMenu = document.querySelector('.header__menu');
       });
    }
 
+   // slick слайдер
    $(document).ready(function(){
       $('.slider').slick({
          arrows:true         
       });
     })
 
+   //  magnific popup
     $(document).ready(function() {
       $('.popup-gallery').magnificPopup({
          delegate: 'a', // child items selector, by clicking on it popup will open
@@ -32,3 +34,38 @@ const headerMenu = document.querySelector('.header__menu');
        });
     });
    
+// let anchors = document.querySelectorAll('a[href*="#"]');
+
+// for(let anchor of anchors ) {
+//    anchor.addEventListener('click', function(event) {
+//       event.preventDefault()
+//       let blockID = anchor.getAttribute('href')
+//       document.querySelector(blockID).scrollIntoView({
+//           behavior: "smooth",
+//           block: "start"
+//       })
+//   })
+// }
+
+// прокрутка при клике
+const menuLinks = document.querySelectorAll('nav__link[data-goto]');
+if (menuLinks.length > 0) {
+   menuLinks.forEach( navLink => {
+      navLink.addEventListener('click', onNavLinkClick);
+   });
+   
+   function onNavLinkClick(e) {
+      const navLink = e.target;
+      if( navLink.dataset.goto && document.querySelectorAll(navLink.dataset.goto)) {
+         const gotoBlock = document.querySelectorAll(navLink.dataset.goto);
+         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYoffset - document.querySelector('header').offsetHeight;
+
+         window.scrollTo({
+            top: gotoBlockValue,
+            behavior: "smooth"
+         });
+         e.preventDefault();
+      }
+   }
+}
+
