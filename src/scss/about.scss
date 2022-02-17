@@ -1,13 +1,19 @@
 .about {
 
-   padding: 42px 0 0;
+   padding: 146px 0 0;
    margin-bottom: 93px;
 
+   @include media(md) {
+      padding: 180px 0 0;
+   }
+
    @include media(sm) {
+      padding: 100px 0 0;
       margin-bottom: 80px;
    }
 
    @include media(xs) {
+      padding: 90px 0 0;
       margin-bottom: 50px;
    }
 

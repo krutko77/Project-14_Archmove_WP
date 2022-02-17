@@ -5,7 +5,7 @@
    width: 100%;
    padding: 28px 0 28px;
    @include text(14px, "SFUIDisplayRegular", 40px, $secondaryTextColor);
-   // position: relative;
+   z-index: 50;
 
    &::before {
       content: "";
