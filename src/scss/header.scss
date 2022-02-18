@@ -100,13 +100,13 @@
       top: 0;
    }
 
-   &__nav {
+   .menu__body {
       @include media(sm) {
          margin-bottom: 40px;
       }
    }
 
-   &__nav ul {
+   .menu__body ul {
       display: flex;
 
       @include media(sm) {
@@ -115,7 +115,7 @@
       }
    }
 
-   &__nav li {
+   .menu__body li {
       margin-right: 48px;
       
       &:last-child {
@@ -127,11 +127,11 @@
       }
    }
 
-   &__nav a {
+   .menu__body a {
       transition: color 0.2s ease 0.1s;
    }
 
-   &__nav a:hover {
+   .menu__body a:hover {
       color: $accentColor;     
    }
 
@@ -188,7 +188,7 @@
 
    //Burger
 
-   &__icon-menu {
+   &__menu-icon {
       display: none;
 
       @include media(sm) {
@@ -225,7 +225,7 @@
       }
    }
 
-   &__icon-menu._active {
+   &__menu-icon._active {
       span {
          transform: scale(0);
       }

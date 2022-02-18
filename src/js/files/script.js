@@ -1,18 +1,41 @@
-// // Подключение функционала "Чертогов Фрилансера"
-// import { isMobile } from "./functions.js";
-// // Подключение списка активных модулей
-// import { flsModules } from "./modules.js";
-
 // бургер меню
-const iconMenu = document.querySelector('.header__icon-menu');
+const menuIcon = document.querySelector('.header__menu-icon');
 const headerMenu = document.querySelector('.header__menu');
-   if (iconMenu) {      
-      iconMenu.addEventListener("click", function(){
+   if (menuIcon) {      
+      menuIcon.addEventListener("click", function(){
          document.body.classList.toggle('_lock');
-         iconMenu.classList.toggle('_active');
+         menuIcon.classList.toggle('_active');
          headerMenu.classList.toggle('_active');
       });
    }
+
+// прокрутка при клике
+const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
+if (menuLinks.length > 0) {
+	menuLinks.forEach(menuLink => {
+		menuLink.addEventListener("click", onMenuLinkClick);
+	});
+
+	function onMenuLinkClick(e) {
+		const menuLink = e.target;
+		if (menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+			const gotoBlock = document.querySelector(menuLink.dataset.goto);
+			const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+
+			if (menuIcon.classList.contains('_active')) {
+				document.body.classList.remove('_lock');
+				menuIcon.classList.remove('_active');
+				headerMenu.classList.remove('_active');
+			}
+
+			window.scrollTo({
+				top: gotoBlockValue,
+				behavior: "smooth"
+			});
+			e.preventDefault();
+		}
+	}
+}
 
    // slick слайдер
    $(document).ready(function(){
@@ -35,38 +58,4 @@ const headerMenu = document.querySelector('.header__menu');
        });
     });
    
-// let anchors = document.querySelectorAll('a[href*="#"]');
-
-// for(let anchor of anchors ) {
-//    anchor.addEventListener('click', function(event) {
-//       event.preventDefault()
-//       let blockID = anchor.getAttribute('href')
-//       document.querySelector(blockID).scrollIntoView({
-//           behavior: "smooth",
-//           block: "start"
-//       })
-//   })
-// }
-
-// прокрутка при клике
-const menuLinks = document.querySelectorAll('nav__link[data-goto]');
-if (menuLinks.length > 0) {
-   menuLinks.forEach( navLink => {
-      navLink.addEventListener('click', onNavLinkClick);
-   });
-   
-   function onNavLinkClick(e) {
-      const navLink = e.target;
-      if( navLink.dataset.goto && document.querySelectorAll(navLink.dataset.goto)) {
-         const gotoBlock = document.querySelectorAll(navLink.dataset.goto);
-         const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYoffset - document.querySelector('header').offsetHeight;
-
-         window.scrollTo({
-            top: gotoBlockValue,
-            behavior: "smooth"
-         });
-         e.preventDefault();
-      }
-   }
-}
 

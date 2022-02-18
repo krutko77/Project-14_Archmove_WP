@@ -18,7 +18,7 @@
       align-items: center;
    }
 
-   &__nav ul {
+   &__menu ul {
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
@@ -36,15 +36,15 @@
       }
    }
 
-   &__nav a {
+   &__menu a {
       transition: color 0.2s ease 0.1s;
    }
 
-   &__nav a:hover {
+   &__menu a:hover {
       color: $accentColor;  
    }
 
-   &__nav li {
+   &__menu li {
       margin-right: 47px;    
       
       &:last-child {
