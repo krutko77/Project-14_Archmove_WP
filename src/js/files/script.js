@@ -9,7 +9,7 @@ const headerMenu = document.querySelector('.header__menu');
       });
    }
 
-// прокрутка при клике
+// прокрутка при клике на пункт меню
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {
@@ -58,7 +58,7 @@ if (menuLinks.length > 0) {
        });
     });
    
-   //  прокрутка вверх по кнопке go-top
+   //  выключение кнопки go-top и прокрутка вверх
     const goTop = document.querySelector('.go-top');
     window.addEventListener('scroll', function() {
       if (window.scrollY > 0) {

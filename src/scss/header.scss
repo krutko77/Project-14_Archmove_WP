@@ -162,11 +162,6 @@
       @include text(14px, "SFUIDisplayRegular", 40px, $secondaryTextColor);
       transition: opacity 0.2s ease 0.1s;
 
-      &:hover {
-         opacity: 0.7;
-         
-      }
-
       @include media(md) {
          padding: 1px 21px;
       }
@@ -178,12 +173,21 @@
 
    &__button--sign-in {
       margin-right: 16px;
+
+      &:hover {
+         background-color: #F2F2F2;         
+      }
    }
 
    &__button--sign-up {
       background-color: $buttonColor;
       color: $buttonTextColor;
       font-weight: 600;
+
+      &:hover {
+         opacity: 0.7;
+         
+      }
    }
 
    //Burger
