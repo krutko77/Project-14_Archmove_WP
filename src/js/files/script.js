@@ -9,7 +9,7 @@ const headerMenu = document.querySelector('.header__menu');
       });
    }
 
-// прокрутка при клике на пункт меню
+// прокрутка при клике на пункт меню и закрытие моб. меню
 const menuLinks = document.querySelectorAll('.menu__link[data-goto]');
 if (menuLinks.length > 0) {
 	menuLinks.forEach(menuLink => {

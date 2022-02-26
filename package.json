@@ -4,6 +4,7 @@
 	"description": "Start template with Gulp and Webpack",
 	"author": "FLS",
 	"private": true,
+	"homepage": "https://krutko77.github.io/Project-14_Archmove_WP",
 	"license": "GNU General Public License (GPL)",
 	"type": "module",
 	"scripts": {
@@ -11,11 +12,12 @@
 		"dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
 		"build": "gulp build --build",
 		"sprite": "gulp sprite",
-		"fonts": "gulp fonts --rewrite",
-		"deploy": "gulp deployFTP --build",
+		"fonts": "gulp fonts --rewrite",		
 		"zip": "gulp deployZIP --build",
 		"devbuild": "gulp build --build --nowebp",
-		"tmp": "gulp -f gulpfile.tmp.js"
+		"tmp": "gulp -f gulpfile.tmp.js",
+      "predeploy": "npm run build",
+      "deploy": "gh-pages -d build"
 	},
 	"devDependencies": {
 		"copy-webpack-plugin": "latest",
@@ -69,6 +71,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"gh-pages": "^3.2.3",
 		"simplebar": "latest"
 	}
 }

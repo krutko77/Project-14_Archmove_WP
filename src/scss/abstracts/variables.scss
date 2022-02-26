@@ -10,11 +10,10 @@ $borderFooterColor: #F0F0F0;
 
 // breakpoints
 $breakpoints: (
-xs: 575px,
-sm: 767px,
-md: 991px,
-lg: 1150px
-);
+   xs: 575px,
+   sm: 767px,
+   md: 991px,
+   lg: 1150px);
 
 // container
 %container {
@@ -32,5 +31,5 @@ lg: 1150px
 
    @media screen and (max-width: 575px) {
       padding: 0 25px;
-   }   
+   }
 }
