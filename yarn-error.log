@@ -1,0 +1,113 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\PAUL\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js init
+
+PATH: 
+  C:\Users\PAUL\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\local\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Git\mingw64\bin;C:\Program Files\Git\usr\bin;C:\Users\PAUL\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;C:\Windows\System32\OpenSSH;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x86;C:\Program Files (x86)\Intel\OpenCL SDK\2.0\bin\x64;C:\Program Files\nodejs;C:\Program Files\Git\cmd;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static;C:\Program Files (x86)\QuickTime\QTSystem;C:\Program Files (x86)\Avest\AvPCM_nces;C:\Program Files (x86)\dotnet;C:\Users\PAUL\AppData\Local\Microsoft\WindowsApps;C:\Program Files\Microsoft VS Code\bin;C:\Users\PAUL\AppData\Roaming\npm;C:\Users\PAUL\AppData\Local\GitHubDesktop\bin;C:\Program Files\JetBrains\WebStorm 2021.3\bin;C:\Program Files\Git\usr\bin\vendor_perl;C:\Program Files\Git\usr\bin\core_perl
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  14.17.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (C:\Users\PAUL\AppData\Roaming\npm\node_modules\yarn\lib\cli.js:137143:13)
+      at Interface.emit (events.js:376:20)
+      at Interface._ttyWrite (readline.js:880:16)
+      at ReadStream.onkeypress (readline.js:213:10)
+      at ReadStream.emit (events.js:376:20)
+      at emitKeys (internal/readline/utils.js:345:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (readline.js:1149:36)
+      at ReadStream.emit (events.js:376:20)
+      at addChunk (internal/streams/readable.js:309:12)
+
+npm manifest: 
+  {
+  	"name": "fls-start",
+  	"version": "3.0.0",
+  	"description": "Start template with Gulp and Webpack",
+  	"author": "FLS",
+  	"private": true,
+  	"homepage": "https://krutko77.github.io/Project-14_Archmove_WP",
+  	"license": "GNU General Public License (GPL)",
+  	"type": "module",
+  	"scripts": {
+  		"test": "echo \"Error: no test specified\" && exit 1",
+  		"dev": "gulp && webpack serve --progress -c config/webpack.dev.js",
+  		"build": "gulp build --build",
+  		"sprite": "gulp sprite",
+  		"fonts": "gulp fonts --rewrite",
+  		"deploy": "gulp deployFTP --build",
+  		"zip": "gulp deployZIP --build",
+  		"devbuild": "gulp build --build --nowebp",
+  		"tmp": "gulp -f gulpfile.tmp.js",
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build"
+  	},
+  	"devDependencies": {
+  		"copy-webpack-plugin": "latest",
+  		"css-loader": "latest",
+  		"del": "latest",
+  		"file-include-webpack-plugin-replace": "latest",
+  		"gulp": "latest",
+  		"gulp-autoprefixer": "latest",
+  		"gulp-clean-css": "latest",
+  		"gulp-fonter-fix": "latest",
+  		"gulp-group-css-media-queries": "latest",
+  		"gulp-if": "latest",
+  		"gulp-imagemin": "latest",
+  		"gulp-newer": "latest",
+  		"gulp-notify": "latest",
+  		"gulp-plumber": "latest",
+  		"gulp-prettier": "latest",
+  		"gulp-rename": "latest",
+  		"gulp-svg-sprite": "latest",
+  		"gulp-ttf2woff": "latest",
+  		"gulp-ttf2woff2": "latest",
+  		"gulp-util": "latest",
+  		"gulp-version-number": "latest",
+  		"gulp-webp": "latest",
+  		"gulp-webp-html-nosvg": "latest",
+  		"gulp-webpcss": "latest",
+  		"gulp-zip": "latest",
+  		"html-webpack-plugin": "latest",
+  		"inputmask": "latest",
+  		"lightgallery": "latest",
+  		"load-plugins": "latest",
+  		"mini-css-extract-plugin": "2.4.7",
+  		"nouislider": "latest",
+  		"pug": "latest",
+  		"pug-loader": "latest",
+  		"sass": "latest",
+  		"sass-loader": "latest",
+  		"smooth-scroll": "latest",
+  		"string-replace-loader": "latest",
+  		"style-loader": "latest",
+  		"swiper": "latest",
+  		"terser-webpack-plugin": "latest",
+  		"tippy.js": "latest",
+  		"transform-runtime": "0.0.0",
+  		"vanilla-lazyload": "latest",
+  		"vinyl-ftp": "latest",
+  		"webp-converter": "2.2.3",
+  		"webpack": "latest",
+  		"webpack-cli": "latest",
+  		"webpack-dev-server": "latest",
+  		"webpack-stream": "latest"
+  	},
+  	"dependencies": {
+  		"gh-pages": "^3.2.3",
+  		"simplebar": "latest"
+  	}
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
