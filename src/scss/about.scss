@@ -22,6 +22,17 @@
       letter-spacing: -5px;
       max-width: 800px;
       margin-bottom: 47px;
+      animation: show 4s;
+
+      @keyframes show {
+         from {
+            opacity: 0;
+         }
+
+         to {
+            opacity: 1;
+         }
+      }
 
       @include media(md) {
          font-size: 90px;
