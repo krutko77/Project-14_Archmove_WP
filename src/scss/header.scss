@@ -117,7 +117,7 @@
 
    .menu__body li {
       margin-right: 48px;
-      
+
       &:last-child {
          margin-right: 0;
       }
@@ -132,7 +132,7 @@
    }
 
    .menu__body a:hover {
-      color: $accentColor;     
+      color: $accentColor;
    }
 
    &__right-block {
@@ -140,7 +140,7 @@
       align-items: center;
    }
 
-   &__img {
+   &__icon-search {
       cursor: pointer;
       margin-right: 26px;
       transition: transform 0.3s ease 0.1s;
@@ -177,7 +177,7 @@
       transition: background-color 0.6s ease 0.1s;
 
       &:hover {
-         background-color: #F2F2F2;         
+         background-color: #F2F2F2;
       }
    }
 
@@ -188,7 +188,7 @@
 
       &:hover {
          opacity: 0.7;
-         
+
       }
    }
 
